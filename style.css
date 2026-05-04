@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 22px;
+  line-height: 1.4;
+}
+
+.container {
+  max-width: 720px;
+  margin: auto;
+}
+
+/* LOGO */
+.logo {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.logo h1 {
+  font-family: Georgia, serif;
+  font-size: 48px;
+  letter-spacing: 4px;
+  font-weight: 900;
+}
+
+.barra-italia {
+  width: 260px;
+  height: 10px;
+  margin: 0 auto 3px;
+  display: flex;
+}
+
+.barra-italia span:nth-child(1) {
+  background: #009246;
+  flex: 1;
+}
+
+.barra-italia span:nth-child(2) {
+  background: #fff;
+  flex: 1;
+}
+
+.barra-italia span:nth-child(3) {
+  background: #ce2b37;
+  flex: 1;
+}
+
+.logo p {
+  font-family: Georgia, serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+/* TITULOS */
+h2 {
+  font-size: 42px;
+  margin-bottom: 24px;
+}
+
+.aviso {
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+.obs {
+  font-size: 15px;
+  font-style: italic;
+  margin-bottom: 28px;
+  color: #ddd;
+}
+
+/* CATEGORIA */
+.categoria {
+  margin: 42px 0 18px;
+}
+
+.categoria h3 {
+  font-size: 27px;
+  margin-bottom: 7px;
+}
+
+.linha {
+  height: 3px;
+  background: linear-gradient(
+    to right,
+    #ce2b37,
+    #ce2b37 45%,
+    #009246 55%,
+    #ce2b37
+  );
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* CARD DA PIZZA */
+.pizza-card {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 16px;
+  margin-bottom: 22px;
+  align-items: center;
+}
+
+/* FOTO */
+.foto-pizza {
+  width: 200px;
+  height: 200px;
+  border-radius: 18px;
+  border: 2px dashed #555;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #aaa;
+  font-size: 13px;
+  overflow: hidden;
+  position: relative;
+}
+
+.foto-pizza img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+/* QUANDO TEM FOTO */
+.foto-pizza.tem-foto {
+  border: none;
+}
+
+.foto-pizza.tem-foto img {
+  display: block;
+}
+
+.foto-pizza.tem-foto span {
+  display: none;
+}
+
+.foto-pizza span {
+  padding: 8px;
+}
+
+/* INFO */
+.pizza-info h4 {
+  font-size: 23px;
+  margin-bottom: 3px;
+}
+
+.pizza-info p {
+  color: #ddd;
+  font-size: 17px;
+  font-style: italic;
+}
+
+/* BEBIDAS */
+.bebidas ul {
+  list-style: none;
+  margin-left: 5px;
+  color: #eee;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.bebidas li::before {
+  content: "• ";
+  color: #fff;
+}
+
+.preco-bebida {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* RODAPE */
+.rodape {
+  display: flex;
+  justify-content: space-around;
+  margin: 80px 0 30px;
+  text-align: center;
+}
+
+.rodape a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.rodape img {
+  width: 65px;
+  height: 65px;
+  display: block;
+  margin: 0 auto 6px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 520px) {
+  body {
+    padding: 18px;
+  }
+
+  .logo h1 {
+    font-size: 42px;
+  }
+
+  h2 {
+    font-size: 38px;
+  }
+
+  .categoria h3 {
+    font-size: 25px;
+  }
+
+  .pizza-card {
+    grid-template-columns: 200px 1fr;
+    gap: 16px;
+  }
+
+  .foto-pizza {
+    width: 200px;
+    height: 200px;
+  }
+
+  .pizza-info h4 {
+    font-size: 21px;
+  }
+
+  .pizza-info p {
+    font-size: 16px;
+  }
+}
+.modal-imagem {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-imagem img {
+  max-width: 100%;
+  max-height: 85vh;
+  border-radius: 15px;
+  object-fit: contain;
+}
+
+.fechar {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  color: white;
+  font-size: 45px;
+  font-weight: bold;
+  cursor: pointer;
+}
